@@ -18,3 +18,22 @@ Residential segregation data can be accessed directly at [https://hdpulse.nimhd.
 ### Prerequisites
 1. **Python**: Ensure Python is installed on your system (version 3.7 or higher recommended).
 2. **Required Libraries**: gzip shutil pandas
+
+#### Combining chunks into a single dataframe
+import gzip
+import os
+import pandas as pd
+split_dir = '/path/to/split_chunks'
+output_file = '/path/to/reconstructed_dataset.json.gz'
+with open(output_file, 'wb') as f_out:
+    for chunk_file in sorted(os.listdir(split_dir)):
+        chunk_path = os.path.join(split_dir, chunk_file)
+        with open(chunk_path, 'rb') as f_in:
+            f_out.write(f_in.read())
+decompressed_file = output_file.replace('.gz', '')
+with gzip.open(output_file, 'rb') as f_in:
+    with open(decompressed_file, 'wb') as f_out:
+        f_out.write(f_in.read())
+
+df = pd.read_json(decompressed_file)
+
