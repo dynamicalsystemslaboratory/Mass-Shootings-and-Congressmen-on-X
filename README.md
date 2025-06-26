@@ -17,6 +17,4 @@ Residential segregation data can be accessed directly at [https://hdpulse.nimhd.
 
 ### Prerequisites
 1. **Python**: Ensure Python is installed on your system (version 3.7 or higher recommended).
-2. **Required Libraries**: Install the following Python libraries:
-   ```bash
-   pip install gzip shutil pandas
+2. **Required Libraries**: gzip shutil pandas
