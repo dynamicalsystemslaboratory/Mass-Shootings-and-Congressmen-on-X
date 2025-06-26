@@ -1,6 +1,6 @@
 # Mass-Shootings-and-Congressmen-on-X
 
-# Anonymized Twitter Data of the 117th US Congress
+## Anonymized Twitter Data of the 117th US Congress
 
 ## Overview
 This dataset contains anonymized Twitter data of members of the 117th US Congress, along with Gun Violence Archive data. The data has been processed and split into smaller chunks for easier handling and sharing (original file is about 3GB). 
