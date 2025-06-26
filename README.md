@@ -20,6 +20,7 @@ Residential segregation data can be accessed directly at [https://hdpulse.nimhd.
 2. **Required Libraries**: gzip shutil pandas
 
 #### Combining chunks into a single dataframe
+```
 import gzip
 import os
 import pandas as pd
